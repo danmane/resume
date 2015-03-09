@@ -8,16 +8,11 @@
     <title>Dan Mané's Resume</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="http://resume.outlast.me/css/main.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./bower_components/plottable/plottable.css" />
 
-    <script type="text/javascript" src="./Ali Yahya_files/yxw8quw.js"></script>
     <style type="text/css"></style>
-    <link rel="stylesheet" href="http://use.typekit.net/c/77f0a8/1w;estilo-pro,2,Vwm:N:n4,Vwp:N:n7/d?3bb2a6e53c9684ffdc9a9bf2125b2a629382aef86c4b3361aff92120c6a7edf9e2e7a8cc7b23303ff9b62499caab68c3cf38f1c792aa0b0235eb644dcda424012db78ad93950de929e2347f4e1fe878ab5014c840fe5e84760e7fd5ff6f0549d4a1d74fa6789aa9052bcce500c13ed5485b9c900ad1e2a9656bf2b4cbe86de87fcf59305d180b6f23412fae5a881b8e12d55096b" />
-    <script type="text/javascript">
-    try {
-        Typekit.load();
-    } catch (e) {}
-    </script>
+
 
 </head>
 
@@ -39,6 +34,62 @@
     </div>
 </blockquote>
  -->
+
+
+            <!-- ################ EDUCATION ################ -->
+            <h2>Education</h2>
+
+            <h3>
+     <a href="http://uchicago.edu/">University of Chicago</a> <span> 2009 - 2013 </span>
+ </h3>
+            <ul>
+                <li>
+                    <strong>Bachelor's Degreee</strong>, Philosophy, with Computer Science as an Allied Field
+                </li>
+                <li>
+                    GPA 3.78/4.00; Dean's List
+                </li>
+                <svg id="gpa-breakdown" width=100% height=100%> </svg>
+            </ul>
+
+
+            <!-- ################ EXPERIENCE ################ -->
+
+            <h2>Professional Experience</h2>
+            <h3>
+     <a href="">Palantir Technologies</a>, Software Engineer
+     <span>July 2013 to November 2014</span>
+ </h3>
+            <ul class="bullet">
+                <li>
+                    Solved critical performance problems on a major web product launch by optimizing the code and changing the UI to accomplish the same workflows without CPU-intensive rendering.
+                </li>
+                <li>
+                    Developed Plottable.js, an open-source charting library, from scratch. It replaced many high maintenance, ad-hoc charting implementations across the company with a single standardized solution. I started the project, and served as tech lead when it grew into a 5 person team. Plottable is now used across Palantir.
+                </li>
+            </ul>
+            <h3>
+ <a href="http://athena.ai/">UChicago CS Dept.</a>,
+ Research Assistant in Machine Learning<span>June - August 2012</span>
+ </h3>
+            <ul class="bullet">
+                <li>
+                    Worked with Professor Risi Kondor to implement the Hierarchical Bhattacharrya Kernel, a novel recursive similarity measure between trees of data.
+                </li>
+                <li>
+                    Implemented the <a href="http://www1.cs.columbia.edu/~jebara/papers/bhatta.pdf">Bhattacharrya Kernel</a>, a similarity measure between sets of data that operates by mapping datasets into an infinite-dimensional Hilbert space, fitting normal distributions to the data, and then computing the <a href="http://en.wikipedia.org/wiki/Bhattacharyya_distance">Bhattacharrya distance</a> between the distributions.
+                </li>
+                <li>
+                    Recursively generalized the Bhattacharrya Kernel to operate on trees of sets of data, by using the Bhattacharrya Kernel as its own base kernel for comparisons.
+                </li>
+                <li>
+                    Discovered and corrected several mathematical errrors in the original formulation.
+                </li>
+                <li>
+                    The code (Matlab and Python) can be found <a href="https://github.com/danmane/Bhattacharrya"> on Github</a>.
+                </li>
+            </ul>
+
             <!-- ################ CODE ################ -->
             <h2>Open-Source Projects</h2>
 
@@ -55,7 +106,7 @@
                 Plottable is under active development by a team at Palantir, and is used in a variety of Palantir products. It is also one of the most-starred Typescript projects on Github.
             </p>
             <p>
-                I was the tech lead on Plottable from Janurary 2014, when I wrote the <a href="https://github.com/palantir/plottable/commit/2854c7e61a816f457b1baef1e7bce60060777c00">first line of code</a> until November 2014, when I left Palantir. I was responsible for the architecture and many of the technical decisions. You can watch a <a href="https://www.youtube.com/watch?v=_A_FdbTkp9c">tech talk at JSConf EU</a> in which I describe the architecture and history of Plottable.
+                I was the tech lead on Plottable from Janurary 2014, when I wrote the <a href="https://github.com/palantir/plottable/commit/2854c7e61a816f457b1baef1e7bce60060777c00">first line of code</a> until November 2014, when I left Palantir. I was responsible for the architecture and many of the technical decisions. You can watch a <a href="https://www.youtube.com/watch?v=_A_FdbTkp9c">tech talk at JSConf EU</a> in which I describe the architecture and history of Plottable. Plottable was used to create the chart at the top of this page.
             </p>
 
 
@@ -73,73 +124,15 @@
             </p>
 
             <canvas id="evolsim-canvas"></canvas>
-
-
-            <h3 id="abalone">
-      Abalone Tournament, a platform for hosting an AI Programming competition
-      (<a href="https://github.com/danmane/abalone">github</a>)
-    </h3>
-            <p>
-                A platform for hosting an AI Programming Competition foucsed on the board game Abalone. Written in Go, Haskell, and Typescript
-            </p>
-            <p>
-
-            </p>
             </p>
 
-
-            <!-- ################ EXPERIENCE ################ -->
-
-            <h2>Professional Experience</h2>
-            <h3>
-                <a href="">Palantir Technologies</a>, Software Engineer
-                <span>July 2013 to November 2014</span>
-            </h3>
-            <ul class="bullet">
-                <li>
-                    Solved critical performance problems on a major web product launch, both by optimizing the code and changing the UI to accomplish the same workflows without CPU-intensive rendering.
-                </li>
-                <li>
-                    Developed Plottable.js from scratch as an open source, first-class charting product to replace ad-hoc implementations across a variety of Palantir products. Led a team of 5 engineers and QE in building Plottable, which is now used across Palantir.
-                </li>
-            </ul>
-            <h3>
-            <a href="http://athena.ai/">UChicago CS Dept.</a>,
-            Research Assistant in Machine Learning<span>June 2012 - 2013</span>
-            </h3>
-            <ul class="bullet">
-                <li>
-                    Worked with Professor Risi Kondor to implement the Hierarchical Bhattacharrya Kernel, a novel recursive similarity measure between trees of data.
-                </li>
-                <li>
-                    First implemented the <a href="http://www1.cs.columbia.edu/~jebara/papers/bhatta.pdf">Bhattacharrya Kernel</a>, a similarity measure between sets of data that operates by mapping datasets into an infinite-dimensional Hilbert space, fitting normal distributions to the data, and then computing the <a href="http://en.wikipedia.org/wiki/Bhattacharyya_distance">Bhattacharrya distance</a> between the distributions.
-                </li>
-                <li>
-                    Then recursively generalized the Bhattacharrya Kernel to operate on trees of sets of data, by using the Bhattacharrya Kernel as its own base kernel for comparisons.
-                </li>
-                <li>
-                    Over the course of the project, I discovered and corrected several mathematical errrors in the original formulation. The code (Matlab and Python) can be found <a href="https://github.com/danmane/Bhattacharrya"> on Github</a>.
-                </li>
-            </ul>
-
-            <!-- ################ EDUCATION ################ -->
-            <h2>Education</h2>
-
-            <h3>
-                <a href="http://uchicago.edu/">University of Chicago</a>
-            </h3>
-            <ul>
-                <li>
-                    <strong>Bachelor's Degreee</strong>, Philosophy, with Computer Science as an Allied Field
-                </li>
-            </ul>
 
 
             <!-- ################ RANDOM ################ -->
             <h2>Miscellaneous</h2>
             <ul class="bullet">
                 <li>
-                    I also have an interest in finance.
+                    I'm quite interested by finance and economics.
                     <ul class="bullet">
                         <li>
                             I worked as an intern for The Pritzker Organization in private equity and Moody's Corporation in credit rating and analysis.
@@ -175,15 +168,15 @@
                         I've travelled extensively (over 45 countries); some memorable experiences include visiting a birthday party thrown by a Mayan family in a rural Guatemalan farming village, eating yak tongue while travelling across the Mongolian desert, and thumb-wrestling with monk children in Tibet.
             </ul>
 
-            <div id="footer">
-                <blockquote>
-                    The story so far: In the beginning the Universe was created. This has made a lot of people very angry and has been widely regarded as a bad move.
-                    <div class="author">
-                        Hitchhiker's Guide
-                    </div>
-                </blockquote>
-            </div>
-
+            <!-- <div id="footer">
+    <blockquote>
+        The story so far: In the beginning the Universe was created. This has made a lot of people very angry and has been widely regarded as a bad move.
+        <div class="author">
+            Hitchhiker's Guide
+        </div>
+    </blockquote>
+</div>
+ -->
             <!--   <blockquote>
     <strong>Infinite</strong>: Bigger than the biggest thing ever and then some.
     Much bigger than that in fact, really amazingly immense, a totally stunning
@@ -241,6 +234,9 @@
             <script src="./evolsim/jquery-1.10.0.min.js"></script>
             <script src="./evolsim/processing-1.4.1.min.js"></script>
             <script src="./evolsim/frontend.js"></script>
+            <script src="./bower_components/d3/d3.min.js"></script>
+            <script src="./bower_components/plottable/plottable.min.js"></script>
+            <script src="./plot/gpa-plot.js"></script>
 
         </section>
     </div>
