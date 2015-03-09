@@ -34,7 +34,6 @@
                     if (this.thunks > 0) {
                         WAIT_FACTOR += .05;
                         WAIT_FACTOR *= 1.05;
-                        console.log("Thunked " + this.thunks + " times");
                         this.thunks = 0;
                     }
                     this.processUpdate();
@@ -122,7 +121,7 @@
                     dr = -this.currentState[id][2] / this.framesUntilUpdate;
                     this.delta[id] = [0, 0, dr];
                 } else {
-                    console.log("blob " + id + " was listed as removed but not found in state");
+                    // console.log("blob " + id + " was listed as removed but not found in state");
                 }
             }
             return this.removedLastStep = removedBlobs;
@@ -146,7 +145,7 @@
                         case 'blobs':
                             return _this.renderer.receiveUpdate(event.data);
                         case 'debug':
-                            return console.log(event.data.msg);
+                            // return console.log(event.data.msg);
                     }
                 };
             })(this);
@@ -175,7 +174,7 @@
             this.running = true;
             $(window).resize((function(_this) {
                 return function() {
-                    console.log("Resizing");
+                    // console.log("Resizing");
                     _this.C.X_BOUND = $("#evolsim-canvas").width();
                     _this.C.Y_BOUND = $("#evolsim-canvas").height();
                     _this.p.size(_this.C.X_BOUND, _this.C.Y_BOUND);
@@ -185,12 +184,22 @@
         }
 
         Frontend.prototype.updateConstants = function() {
-            console.log("Called update constants");
+            // console.log("Called update constants");
             return this.sim.postMessage({
                 type: 'updateConstants',
                 data: this.C
             });
         };
+
+        Frontend.prototype.mouseClick = function() {
+            this.sim.postMessage({
+                type: 'killAllBlobs'
+            });
+            this.sim.postMessage({
+                type: 'addBlobs',
+                data: 50
+            });
+        }
 
         Frontend.prototype.setupGui = function() {
             var gui, opt, vals, varName, _ref;
@@ -338,7 +347,7 @@
             return frontend.step();
         };
         return p.keyPressed = function() {
-            console.log(p.keyCode);
+            // console.log(p.keyCode);
             return frontend.keyCode(p.keyCode);
         };
     };

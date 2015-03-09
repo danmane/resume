@@ -19,7 +19,7 @@ var gpaBySubject = [{
 }, ]
 
 var xScale = new Plottable.Scale.Ordinal();
-var yScale = new Plottable.Scale.Linear().domain([3.3, 4.1]);
+var yScale = new Plottable.Scale.Linear().domain([3.3, 4.05]);
 var colorScale = new Plottable.Scale.Color();
 var gridlines = new Plottable.Component.Gridlines(null, yScale);
 
@@ -31,8 +31,12 @@ var plot = new Plottable.Plot.Bar(xScale, yScale)
     .animate(true);
 var xAxis = new Plottable.Axis.Category(xScale, "bottom");
 var yAxis = new Plottable.Axis.Numeric(yScale, "left");
+var label = new Plottable.Component.AxisLabel("(made with Plottable.js)");
+var title = new Plottable.Component.TitleLabel("GPA by Subject");
 var table = new Plottable.Component.Table([
+    [null, title],
     [yAxis, gridlines.merge(plot)],
-    [null, xAxis]
+    [null, xAxis],
+    [null, label]
 ]);
 table.renderTo("#gpa-breakdown");

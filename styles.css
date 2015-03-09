@@ -23,7 +23,7 @@ body {
     text-align: center;
 }
 #header h1 {
-    color: #FF0000;
+    color: #0066FF;
     border-bottom: none;
     font-family: "estilo-pro", Palatino, Garamond, Georgia, serif;
     font-size: 5em;
@@ -88,7 +88,7 @@ body {
     }
 }
 a:link, a:visited {
-    color: #FF0000;
+    color: #0066FF;
     text-decoration: none;
 }
 a:hover, a:focus, a:active {
@@ -139,6 +139,10 @@ p {
     margin-top: 0.6em;
     margin-bottom: 0.6em;
     line-height: 1.6em;
+}
+p.smalltext {
+    font-size: 0.8em;
+    margin-top: 0em;
 }
 p.final {
     margin-bottom: 1.5em;
