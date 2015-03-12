@@ -192,6 +192,7 @@
         };
 
         Frontend.prototype.mouseClick = function() {
+            console.log("clicK");
             this.sim.postMessage({
                 type: 'killAllBlobs'
             });
@@ -355,10 +356,19 @@
     $(document).ready(function() {
         var canvas;
         canvas = $("#evolsim-canvas")[0];
+        var waypointFound = false;
+        var waypoint = new Waypoint({
+            element: document.getElementById('evolsim-canvas'),
+            handler: function(direction) {
+                waypointFound = true;
+                window.HACKHACK.tryContinue();
+            },
+            offset: 'bottom_in_view'
+        })
         window.HACKHACK = {};
         window.HACKHACK.tryContinue = function() {
             var processing;
-            if ((window.HACKHACK.guiSettings != null) && (window.HACKHACK.nonGuiSettings != null)) {
+            if ((window.HACKHACK.guiSettings != null) && (window.HACKHACK.nonGuiSettings != null) && waypointFound) {
                 processing = new Processing(canvas, processingSetup);
                 return window.HACKHACK = null;
             }
