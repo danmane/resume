@@ -1043,14 +1043,17 @@
 
         Simulation.prototype.step = function() {
             var blob, id, _ref, _ref1, _ref2, _ref3, _results;
-            if (this.nBlobs > 300) {
-                self.C.PHO_EPS = -0.1;
-                self.C.PHO_SQ_EPS = 0;
-            } else if (this.nBlobs < 10) {
-                self.C.PHO_EPS = 1.5;
-            } else {
-                self.C.PHO_EPS = 0.5;
-            }
+            // if (this.nBlobs > 300) {
+ //     self.C.PHO_EPS = -0.1;
+ //     self.C.PHO_SQ_EPS = 0;
+ // } else if (this.nBlobs < 10) {
+ //     self.C.PHO_EPS = 1.5;
+ //     self.C.PHO_SQ_EPS = 0.3;
+ // } else {
+ //     self.C.PHO_SQ_EPS = 0.2;
+ //     self.C.PHO_EPS = 0.5;
+ // }
+
             this.blobsRemovedThisStep = [];
             this.qtree.rebuild();
             _ref = this.blobs;
