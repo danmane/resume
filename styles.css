@@ -297,3 +297,7 @@ canvas {
         display: none;
     }
 }
+.qr {
+    display: none;
+    /*disable qr until the mobile support is top notch, since qr encourages hitting mobile*/
+}
