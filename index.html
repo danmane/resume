@@ -24,6 +24,14 @@
             <h1>Dan Mané</h1>
         </header>
 
+        <center id="printwarning" class="printonly">
+            <img class="qr" src="resume_qr.png" alt="http://danmane.github.io/resume">
+            <p class="" id="printwarning"> This resume is best in the browser.
+                <br>
+                <a href="http://danmane.github.io/resume">http://danmane.github.io/resume</a>
+            </p>
+        </center>
+
         <section class="content clearfix">
 
             <!-- ################ EDUCATION ################ -->
@@ -65,7 +73,17 @@
                 </li>
                 In the tech talk below, given at <a href="http://2014.jsconf.eu/speakers/">JSConf EU 2014</a>, I discuss Plottable and how it fits into the broader Javascript ecosystem.
             </ul>
-            <embed id="jsconf" width="100%" height="315" src="http://www.youtube.com/v/_A_FdbTkp9c">
+
+            <div class="youtube">
+                <div class="printonly">
+                    <img src="jsconf_keyframe.png" alt="My tech talk at JSConf Eu on Plottable.js">
+                </div>
+                <div class="webonly">
+                    <embed id="jsconf" width="100%" height="315" src="http://www.youtube.com/v/_A_FdbTkp9c">
+                </div>
+            </div>
+
+
             <h3>
  <a href="https://www.cs.uchicago.edu/">UChicago CS Dept.</a>,
  Research Assistant in Machine Learning<span>June - August 2012</span>
@@ -93,11 +111,22 @@
       (<a href="https://github.com/danmane/EvolutionSimulator">github</a>,
        <a href="http://danmane.github.io/EvolutionSimulator">full-sized</a>)
     </h3>
-            <canvas id="evolsim-canvas"></canvas>
-            <center>
-                <p class="smalltext"><i> Click the simulation to reset it (e.g. if all bacteria have died) </i>
-                </p>
-            </center>
+            <div id="evolsim-container">
+                <div class="webonly">
+                    <canvas id="evolsim-canvas"></canvas>
+                    <center>
+                        <p class="smalltext"><i> Click the simulation to reset it (e.g. if all bacteria have died) </i>
+                        </p>
+                    </center>
+                </div>
+                <div class="printonly">
+                    <img id="evolsim-static" src="evolsim_static.png" height="auto" width="auto">
+                    <center>
+                        <p class="smalltext">Live at <a href="http://danmane.github.io/EvolutionSimulator/">http://danmane.github.io/EvolutionSimulator/</a>
+                        </p>
+                    </center>
+                </div>
+            </div>
             <ul class="bullet">
                 <li>Developed a web-based simulation of evolving bacteria; explores natural selection and evolution</li>
                 <li>Used web-workers to run a CPU-intensive simulation in a seperate process, and wrote a frontend that interpolates model update with variable timesteps to maintain a constant framerate</li>
@@ -122,6 +151,13 @@
                 </ul>
             </ul>
 
+            <h3 id="programming-languages">
+                Programming Languages 
+            </h3>
+            <ul class="bullet">
+                <li><i>Proficient</i>: Javascript, Typescript, Python </li>
+                <li><i>Familiar</i>: Haskell, Go, C </li>
+            </ul>
 
             <!-- ################ RANDOM ################ -->
             <h2>Miscellaneous</h2>
