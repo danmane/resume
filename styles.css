@@ -68,7 +68,7 @@
         width: 100%;
         height: 250px;
     }
-    embed#jsconf {
+    embed {
         width: 100%;
         height: 300;
     }
@@ -117,7 +117,7 @@
         width: 90%;
         height: 250px;
     }
-    embed#jsconf {
+    embed {
         width: 100%;
         height: 250;
     }
